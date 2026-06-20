@@ -20,13 +20,12 @@ header {
 }
 
 .hero {
-	padding-top: 40px;
-	height: 1000px;
+	padding: 40px 0px;
 	background-color: #F3E4C9;
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	gap: 20px;
+	gap: 50px;
 }
 
 .ads {
@@ -41,8 +40,8 @@ footer {
 
 /* Others */
 .card {
-	height: 300px;
-	width: 300px;
+	height: 800px;
+	width: 800px;
 	background-color: rgb(229, 229, 211);
 }
 
