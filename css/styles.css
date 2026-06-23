@@ -13,7 +13,7 @@ body {
 
 header {
 	height: 300px;
-	background-color: #0A2947;
+	background-color: #171717;
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
@@ -21,7 +21,7 @@ header {
 
 .hero {
 	padding: 40px 0px;
-	background-color: #F3E4C9;
+	background-color: #FAFAFA;
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
@@ -30,12 +30,12 @@ header {
 
 .ads {
 	height: 500px;
-	background-color: #D3D4C0;
+	background-color: #1fc2c3;
 }
 
 footer {
 	height: 300px;
-	background-color: #8B5E3C;
+	background-color: #171717;
 }
 
 /* Others */
