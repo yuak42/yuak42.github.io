@@ -23,8 +23,8 @@ header {
 	padding: 40px 0px;
 	background-color: #FAFAFA;
 	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
 	gap: 50px;
 }
 
@@ -40,11 +40,19 @@ footer {
 
 /* Others */
 .card {
-	height: 800px;
-	width: 800px;
-	background-color: rgb(229, 229, 211);
+	height: 600px;
+	width: 80vw;
+	border: 3px solid #e5e5e5;
+	display: flex;
 }
 
+.card > img {
+	border: 1px solid red;
+}
+
+.card > .explanation {
+	background-color: #f4f4f5;
+}
 
 h1 {
 	font-size: 30px;
