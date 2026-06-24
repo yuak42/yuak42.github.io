@@ -1,6 +1,10 @@
 @import url(./reset.css);
 
 /* Init styles */
+* {
+	box-sizing: border-box;
+}
+
 html {
 	font-family: "Roboto", sans-serif;
 }
@@ -42,12 +46,15 @@ footer {
 .card {
 	height: 600px;
 	width: 80vw;
-	border: 3px solid #e5e5e5;
+	border: 5px solid #e5e5e5;
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .card > img {
-	border: 1px solid red;
+	height: 590px;
+	width: auto;
+	flex-shrink: 0;
 }
 
 .card > .explanation {
