@@ -54,16 +54,26 @@ footer {
 .card > img {
 	height: 590px;
 	width: auto;
-	flex-shrink: 0;
 }
 
 .card > .explanation {
+	padding: 30px;
 	background-color: #f4f4f5;
+	flex-grow: 1;
+	display: flex;
+	gap: 40px;
+	align-items: center;
+	flex-direction: column;
 }
 
-h1 {
+.explanation > h1 {
 	font-size: 30px;
-	color: white;
+	color: #171717;
+	font-weight: bold;
+}
+
+.explanation > p {
+	line-height: 1.5;
 }
 
 .volatile {
