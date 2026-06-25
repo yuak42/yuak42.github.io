@@ -1,10 +1,6 @@
 @import url(./reset.css);
 
 /* Init styles */
-* {
-	box-sizing: border-box;
-}
-
 html {
 	font-family: "Roboto", sans-serif;
 }
@@ -23,12 +19,17 @@ header {
 	justify-content: space-evenly;
 }
 
+header > h1 {
+	color: #FAFAFA;
+}
+
 .hero {
 	padding: 40px 0px;
 	background-color: #FAFAFA;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	flex-wrap: wrap;
 	gap: 50px;
 }
 
@@ -45,25 +46,28 @@ footer {
 /* Others */
 .card {
 	height: 600px;
-	width: 80vw;
 	border: 5px solid #e5e5e5;
 	display: flex;
+	justify-content: space-between;
 	flex-wrap: wrap;
+	gap: 30px;
 }
 
-.card > img {
-	height: 590px;
-	width: auto;
+.card > .img-container {
+	border: 4px solid red;
+	flex: 1;
+	max-width: 50%;
+	display: flex;
 }
 
 .card > .explanation {
 	padding: 30px;
 	background-color: #f4f4f5;
-	flex-grow: 1;
+	flex: 1;
 	display: flex;
-	gap: 40px;
-	align-items: center;
 	flex-direction: column;
+	align-items: center;
+	gap: 40px;
 }
 
 .explanation > h1 {
@@ -78,4 +82,8 @@ footer {
 
 .volatile {
 	color: white;
+}
+
+img {
+	max-width: 100%;
 }
