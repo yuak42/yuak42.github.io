@@ -5,27 +5,49 @@ html {
 	font-family: "Roboto", sans-serif;
 }
 
+a {
+	color: #FAFAFA;
+	text-decoration: none;
+}
+
 /* Containers */
-body {
+#main-container {
+	/* Layout */
 	display: flex;
 	flex-direction: column;
+	gap: 40px;
+}
+
+.contact > ul {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.contact > ul > li {
+	display: flex;
+	align-items: center;
+	gap: 10px;
 }
 
 header {
 	height: 300px;
 	background-color: #171717;
+	/* Layout */
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
 }
 
 header > h1 {
+	font-size: 25px;
 	color: #FAFAFA;
 }
 
 .hero {
-	padding: 40px 0px;
 	background-color: #FAFAFA;
+	/* Layout */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -47,6 +69,7 @@ footer {
 .card {
 	height: 600px;
 	border: 5px solid #e5e5e5;
+	/* Layout */
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
