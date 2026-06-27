@@ -14,20 +14,43 @@ a {
 /* Containers */
 #main-container {
 	background-color: #FAFAFA;
-	/* Layout */
+	/* Layout inside*/
 	display: flex;
 	flex-direction: column;
 }
 
-/* Header */
 header {
 	height: 300px;
 	background-color: #171717;
-	/* Layout */
+	/* Layout inside */
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
 }
+
+.hero {
+	background-color: #FAFAFA;
+	padding: 30px;
+	/* Layout inside */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 50px;
+}
+
+.card {
+	/* Layout inside */
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 30px;
+}
+
+/* Header Elements */
 
 header > h1 {
 	font-size: 25px;
@@ -48,36 +71,17 @@ header > h1 {
 	gap: 10px;
 }
 
-/* Hero */
-.hero {
-	background-color: #FAFAFA;
-	/* Layout */
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	flex-wrap: wrap;
-	gap: 50px;
-	margin: 50px;
-}
-
-.card {
-	/* Layout */
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	flex-wrap: wrap;
-	gap: 30px;
-}
-
+/* Hero Elements */
 .card > .img-container {
 	min-width: 300px;
+	max-width: 600px;
 	flex: 1;
 	display: flex;
 }
 
 .card > .explanation {
 	min-width: 300px;
+	max-width: 900px;
 	flex: 1;
 	padding: 30px;
 }
