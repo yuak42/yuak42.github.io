@@ -41,6 +41,18 @@ header {
 	gap: 50px;
 }
 
+.projects {
+	background-color: #171717;
+	padding: 30px;
+	/* Layout inside */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 50px;
+}
+
 .card {
 	/* Layout inside */
 	display: flex;
@@ -48,7 +60,7 @@ header {
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
-	gap: 30px;
+	gap: 10px 30px;
 }
 
 /* Header Elements */
@@ -74,10 +86,13 @@ header > h1 {
 
 /* Hero Elements */
 .card > .img-container {
+	width: 50%;
 	min-width: 300px;
 	max-width: 600px;
 	flex: 1;
 	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .card > .explanation {
@@ -91,11 +106,12 @@ header > h1 {
 	text-align: center;
 	margin: 20px;
 	font-size: 30px;
-	color: #171717;
+	color: #FAFAFA;
 	font-weight: bold;
 }
 
 .explanation > p {
+	color: #FAFAFA;
 	line-height: 1.5;
 }
 
