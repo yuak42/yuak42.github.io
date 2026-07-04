@@ -1,2 +1,35 @@
 @import url("../../css/reset.css");
+@import url("../../css/style.css");
 
+body {
+	background-color: #00babc;
+}
+
+.docs {
+	margin: 40px;
+	height: 1000px;
+	/* Layout inside */
+	display: flex;
+	flex-direction: column;
+	gap: 40px;x
+}
+
+.doc {
+	border: 3px solid white;
+	flex: 1;
+	/* Layout inside */
+	display: flex;
+}
+
+.feedback {
+	background-color: rgb(160, 160, 160);
+	padding: 10px 40px;
+}
+
+.feedback > li {
+	list-style-type: decimal;
+}
+
+.feedback > li::marker {
+	color: rgba(0, 0, 0, 0.514);
+}
