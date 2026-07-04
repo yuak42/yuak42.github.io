@@ -17,5 +17,5 @@ Content lies in 8fr part.
 
 main-container is a grid consists of 3 parts. 1fr 8fr 1fr.
 The most left and the most right parts are empty.
-main content lies in 8fr part.
+main content lies in 8fr part
 
