@@ -136,8 +136,10 @@ main .img-container, main .p-container {
 
 .live-web {
 	padding: 5px 10px;
-	color: white;
-	background-color: #111844;
+	font-weight: bold;
+	border-radius: 5px;
+	color: #00babc;
+	background-color: white;
 	align-self: flex-end;
 }
 
