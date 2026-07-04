@@ -2,6 +2,7 @@
 
 body {
     font-size: 20px;
+	font-weight: 500;
     font-family: "Google Sans", sans-serif;
 }
 
@@ -53,9 +54,17 @@ a.menu-link:hover {
 	gap: 30px;
 }
 
+.short-intro .img-container, .short-intro .p-container {
+	width: 100%;
+	height: 100%;
+	box-shadow: 2px 2px 20px 2px #86868666;
+	border-radius: 15px;
+}
+
 /* Main */
 .main-container {
-	background-color: #f9f9f9; 
+	background-color: #00babc;
+	color: white;
 	/* Layout Inside */
 	display: grid;
 	grid-template-columns: 1fr 8fr 1fr;
@@ -70,7 +79,6 @@ main {
 }
 
 .content {
-	background-color: white;
 	/* Layout Inside */
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -79,14 +87,13 @@ main {
 	gap: 30px;
 }
 
-/* Common */
-.short-intro .img-container, .short-intro .p-container {
+main .img-container, main .p-container {
 	width: 100%;
 	height: 100%;
-	box-shadow: 2px 2px 20px 2px #86868666;
-	border-radius: 15px;
+	border: 3px solid white;
 }
 
+/* Common */
 .img-container > img {
 	width: 100%;
 	height: 100%;
@@ -103,6 +110,28 @@ main {
 	align-items: flex-start;
 }
 
+.p-container h2 {
+	align-self: center;
+}
+
+.p-container h3 {
+	margin-top: 30px;
+}
+
+.p-container ul {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.p-container ul li {
+	list-style-type: disc;
+}
+
+.p-container ul li a {
+	color: white;
+	font-weight: bold;
+}
 /* Others */
 
 .live-web {
@@ -124,8 +153,8 @@ main {
 	height: 100%;
 }
 
+/* footer */
 footer {
 	color: white;
-	font-weight: 500;
-	background-color: #00babc;
+	background-color: white;
 }
