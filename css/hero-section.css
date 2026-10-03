@@ -62,11 +62,13 @@
 .terminal-prompt {
 	color: rgb(24, 222, 24);
 }
+
 #first-input {
 	margin-top: 20px;
 }
 
-.terminal-input {
+.terminal-input,
+.terminal-history {
 	display: flex;
 	align-items: center;
 	gap: 8px;
@@ -81,4 +83,7 @@
 	border: none;
 	outline: none;
 	color: white;
+}
+
+.terminal-history-command {
 }

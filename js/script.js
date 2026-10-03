@@ -1,31 +1,32 @@
-const commandInput = document.getElementById("terminal-command");
+const terminalCommandInput = document.getElementById("terminal-command-input");
+const terminalInput = document.querySelector(".terminal-input");
 const terminalBody = document.querySelector(".terminal-body");
 
 if (!terminalBody) {
 	console.log("Terminal body problem");
 }
 
-commandInput.addEventListener("keydown", (e) => {
+terminalCommandInput.addEventListener("keydown", (e) => {
 	if (e.key === "Enter") {
 		console.log(e.target.value);
-		terminalBody.appendChild(createTerminalInput());
+		terminalInput.before(createTerminalHistory());
+		terminalCommandInput.value = "";
 	}
 });
 
-function createTerminalInput() {
-	let terminalInput = document.createElement("div");
-	terminalInput.classList = "terminal-input";
+function createTerminalHistory() {
+	let terminalHistory = document.createElement("div");
+	terminalHistory.classList.add("terminal-history");
 
 	let prompt = document.createElement("span");
-	prompt.classList = "terminal-prompt";
+	prompt.classList.add("terminal-prompt");
 	prompt.textContent = "yuak42@portfolio $";
+	terminalHistory.appendChild(prompt);
 
-	terminalInput.appendChild(prompt);
+	let command = document.createElement("span");
+	command.classList.add("terminal-history-command");
+	command.textContent = " " + terminalCommandInput.value;
+	terminalHistory.appendChild(command);
 
-	let input = document.createElement("input");
-	input.classList = "terminal-command";
-
-	terminalInput.appendChild(input);
-
-	return terminalInput;
+	return terminalHistory;
 }
