@@ -23,8 +23,12 @@
 .terminal {
 	color: white;
 	background-color: black;
+	border-radius: 8px;
+	overflow: hidden;
+	font-family: monospace;
 }
 
+/* Terminal Tab */
 .terminal-tab {
 	padding: 10px;
 	background-color: var(--black-42);
@@ -50,6 +54,17 @@
 	background-color: #28c840;
 }
 
+/* Terminal Body */
+
 .terminal-body {
 	padding: 20px;
+}
+
+.terminal-prompt {
+	color: rgb(24, 222, 24);
+}
+
+.terminal-empty {
+	height: 20px;
+	width: 100%;
 }
