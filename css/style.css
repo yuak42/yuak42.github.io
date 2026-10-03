@@ -12,6 +12,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	background-color: var(--white-42);
+	gap: 40px;
 }
 
 body section {

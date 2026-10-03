@@ -1,6 +1,6 @@
 .hero-section {
 	background-color: white;
-	margin: 20px auto;
+	margin: 0 auto;
 	width: 90%;
 	border-radius: 5px;
 	padding: 40px;
@@ -68,7 +68,7 @@
 }
 
 .terminal-prompt {
-	min-width: 220px;
+	flex: 0 0 auto;
 	color: rgb(24, 222, 24);
 }
 
