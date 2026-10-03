@@ -1,0 +1,55 @@
+.hero-section {
+	background-color: white;
+	margin: 20px auto;
+	width: 90%;
+	height: 800px;
+	border-radius: 5px;
+	padding: 40px;
+	/* Layout */
+	display: grid;
+	grid-template-columns: 6fr 4fr;
+	gap: 40px;
+}
+
+.hero-img {
+	align-self: center;
+}
+
+.hero-img > img {
+	width: 100%;
+}
+
+/* Terminal */
+.terminal {
+	color: white;
+	background-color: black;
+}
+
+.terminal-tab {
+	padding: 10px;
+	background-color: var(--black-42);
+	display: flex;
+	gap: 10px;
+}
+
+.terminal-dot {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+}
+
+.red {
+	background-color: #ff5f57;
+}
+
+.yellow {
+	background-color: #febc2e;
+}
+
+.green {
+	background-color: #28c840;
+}
+
+.terminal-body {
+	padding: 20px;
+}
