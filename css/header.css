@@ -23,3 +23,19 @@ a.menu-link {
 a.menu-link:hover {
 	background-color: black;
 }
+
+@media (max-width: 600px) {
+	header {
+		height: auto;
+		padding: 20px 10px;
+	}
+
+	header ul {
+		gap: 10px;
+		flex-wrap: wrap;
+	}
+
+	a.menu-link {
+		padding: 8px;
+	}
+}

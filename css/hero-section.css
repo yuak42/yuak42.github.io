@@ -25,6 +25,7 @@
 	border-radius: 8px;
 	overflow: hidden;
 	font-family: monospace;
+	min-height: 500px;
 }
 
 /* Terminal Tab */
@@ -67,6 +68,7 @@
 }
 
 .terminal-prompt {
+	min-width: 220px;
 	color: rgb(24, 222, 24);
 }
 
@@ -82,4 +84,34 @@
 
 .terminal-output {
 	white-space: pre-wrap;
+}
+
+@media (max-width: 1200px) {
+	.hero-section {
+		grid-template-columns: 1fr;
+	}
+
+	.hero-img {
+		text-align: center;
+	}
+
+	.hero-img > img {
+		max-width: 500px;
+	}
+	.hero-img {
+		order: -1;
+	}
+}
+
+@media (max-width: 600px) {
+	.hero-section {
+		width: 95%;
+		margin: 10px auto;
+		padding: 20px;
+		gap: 20px;
+	}
+
+	.terminal-body {
+		padding: 15px;
+	}
 }
