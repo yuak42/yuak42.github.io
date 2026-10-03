@@ -19,7 +19,7 @@ const commands = {
 };
 
 let history = [];
-let historyIndex = 0;
+let historyIndex = -1;
 
 terminalCommandInput.focus();
 
@@ -29,20 +29,21 @@ terminalCommandInput.addEventListener("keydown", (e) => {
 		executeCommand(terminalCommandInput.value);
 		terminalCommandInput.value = "";
 	}
+
 	if (e.key === "ArrowUp") {
 		if (historyIndex > 0) {
-			terminalCommandInput.value = history[historyIndex - 1];
 			historyIndex--;
+			terminalCommandInput.value = history[historyIndex];
 		}
 	}
 
 	if (e.key === "ArrowDown") {
 		if (historyIndex < history.length - 1) {
-			terminalCommandInput.value = history[historyIndex - 1];
 			historyIndex++;
-		} else if (historyIndex === history.length) {
+			terminalCommandInput.value = history[historyIndex];
+		} else {
+			historyIndex = history.length;
 			terminalCommandInput.value = "";
-			historyIndex++;
 		}
 	}
 });
