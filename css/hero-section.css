@@ -63,8 +63,23 @@
 .terminal-prompt {
 	color: rgb(24, 222, 24);
 }
+#first-input {
+	margin-top: 20px;
+}
 
-.terminal-empty {
-	height: 20px;
-	width: 100%;
+.terminal-input {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.terminal-input > input {
+	flex: 1;
+	min-width: 0;
+	font-family: inherit;
+	font-size: inherit;
+	background: transparent;
+	border: none;
+	outline: none;
+	color: white;
 }
