@@ -3,8 +3,6 @@ const terminalBody = document.querySelector(".terminal-body");
 const terminalInput = document.querySelector(".terminal-input");
 const terminalCommandInput = document.getElementById("terminal-command-input");
 
-terminalCommandInput.focus();
-
 const commands = {
 	whoami: "Yunus Emre Ak",
 	help:
@@ -20,11 +18,32 @@ const commands = {
 	ls: "Yeah, every time I see a terminal I want to type 'ls' too",
 };
 
+let history = [];
+let historyIndex = 0;
+
+terminalCommandInput.focus();
+
 terminalCommandInput.addEventListener("keydown", (e) => {
 	if (e.key === "Enter") {
 		terminalInput.before(createTerminalHistory());
 		executeCommand(terminalCommandInput.value);
 		terminalCommandInput.value = "";
+	}
+	if (e.key === "ArrowUp") {
+		if (historyIndex > 0) {
+			terminalCommandInput.value = history[historyIndex - 1];
+			historyIndex--;
+		}
+	}
+
+	if (e.key === "ArrowDown") {
+		if (historyIndex < history.length - 1) {
+			terminalCommandInput.value = history[historyIndex - 1];
+			historyIndex++;
+		} else if (historyIndex === history.length) {
+			terminalCommandInput.value = "";
+			historyIndex++;
+		}
 	}
 });
 
@@ -62,6 +81,8 @@ function executeCommand(command) {
 			createTerminalOutput(`Command not found: ${trimmedCommand}`),
 		);
 	}
+	history.push(trimmedCommand);
+	historyIndex = history.length;
 }
 
 function createTerminalOutput(text) {
