@@ -79,3 +79,7 @@
 	outline: none;
 	color: white;
 }
+
+.terminal-output {
+	white-space: pre-wrap;
+}

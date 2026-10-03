@@ -1,6 +1,24 @@
+const terminal = document.querySelector(".terminal");
 const terminalBody = document.querySelector(".terminal-body");
 const terminalInput = document.querySelector(".terminal-input");
 const terminalCommandInput = document.getElementById("terminal-command-input");
+
+terminalCommandInput.focus();
+
+const commands = {
+	whoami: "Yunus Emre Ak",
+	help:
+		"Available commands:\n" +
+		"whoami     About me\n" +
+		"education  My education\n" +
+		"contact    Contact information\n" +
+		"clear      Clear terminal",
+	education:
+		"İTÜ - Mathematical Engineering\n42 Türkiye - Software Development Program",
+	contact: "yeak558@gmail.com",
+	pwd: "https://yuak42.github.io",
+	ls: "Yeah, every time I see a terminal I want to type 'ls' too",
+};
 
 terminalCommandInput.addEventListener("keydown", (e) => {
 	if (e.key === "Enter") {
@@ -8,6 +26,10 @@ terminalCommandInput.addEventListener("keydown", (e) => {
 		executeCommand(terminalCommandInput.value);
 		terminalCommandInput.value = "";
 	}
+});
+
+terminal.addEventListener("click", () => {
+	terminalCommandInput.focus();
 });
 
 function createTerminalHistory() {
@@ -28,11 +50,11 @@ function createTerminalHistory() {
 }
 
 function executeCommand(command) {
-	let trimmedCommand = command.trim();
-	if (trimmedCommand === "whoami") {
-		terminalInput.before(createTermialOutput("Yunus Emre Ak"));
-	} else if (trimmedCommand === "help") {
-		terminalInput.before(createTerminalOutput("helpText"));
+	let trimmedCommand = command.trim().toLowerCase();
+	if (trimmedCommand === "") {
+		return;
+	} else if (trimmedCommand in commands) {
+		terminalInput.before(createTerminalOutput(commands[trimmedCommand]));
 	} else if (trimmedCommand === "clear") {
 		clearTerminal();
 	} else {
@@ -53,4 +75,5 @@ function createTerminalOutput(text) {
 function clearTerminal() {
 	terminalBody.replaceChildren();
 	terminalBody.appendChild(terminalInput);
+	terminalCommandInput.focus();
 }
