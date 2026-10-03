@@ -24,6 +24,10 @@ a.menu-link:hover {
 	background-color: black;
 }
 
+#selected-menu-link {
+	background-color: black;
+}
+
 @media (max-width: 600px) {
 	header {
 		height: auto;
