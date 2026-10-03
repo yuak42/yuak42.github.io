@@ -1,10 +1,5 @@
-const terminalCommandInput = document.getElementById("terminal-command-input");
 const terminalInput = document.querySelector(".terminal-input");
-const terminalBody = document.querySelector(".terminal-body");
-
-if (!terminalBody) {
-	console.log("Terminal body problem");
-}
+const terminalCommandInput = document.getElementById("terminal-command-input");
 
 terminalCommandInput.addEventListener("keydown", (e) => {
 	if (e.key === "Enter") {

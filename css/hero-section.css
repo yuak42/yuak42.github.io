@@ -59,14 +59,6 @@
 	padding: 20px;
 }
 
-.terminal-prompt {
-	color: rgb(24, 222, 24);
-}
-
-#first-input {
-	margin-top: 20px;
-}
-
 .terminal-input,
 .terminal-history {
 	display: flex;
@@ -74,16 +66,16 @@
 	gap: 8px;
 }
 
-.terminal-input > input {
+.terminal-prompt {
+	color: rgb(24, 222, 24);
+}
+
+.terminal-input input {
 	flex: 1;
-	min-width: 0;
 	font-family: inherit;
 	font-size: inherit;
 	background: transparent;
 	border: none;
 	outline: none;
 	color: white;
-}
-
-.terminal-history-command {
 }
