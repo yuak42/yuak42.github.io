@@ -18,6 +18,7 @@ terminalCommandInput.addEventListener("keydown", (e) => {
 	}
 
 	if (e.key === "ArrowUp") {
+		e.preventDefault();
 		if (historyIndex > 0) {
 			historyIndex--;
 			terminalCommandInput.value = history[historyIndex];
@@ -25,6 +26,7 @@ terminalCommandInput.addEventListener("keydown", (e) => {
 	}
 
 	if (e.key === "ArrowDown") {
+		e.preventDefault();
 		if (historyIndex < history.length - 1) {
 			historyIndex++;
 			terminalCommandInput.value = history[historyIndex];
