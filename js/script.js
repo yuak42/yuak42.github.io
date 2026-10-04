@@ -1,25 +1,12 @@
+import { commands } from "./commands.js";
+
 const terminal = document.querySelector(".terminal");
 const terminalBody = document.querySelector(".terminal-body");
 const terminalInput = document.querySelector(".terminal-input");
 const terminalCommandInput = document.getElementById("terminal-command-input");
 
-const commands = {
-	whoami: "Yunus Emre Ak",
-	help:
-		"Available commands:\n" +
-		"whoami     About me\n" +
-		"education  My education\n" +
-		"contact    Contact information\n" +
-		"clear      Clear terminal",
-	education:
-		"İTÜ - Mathematical Engineering\n42 Türkiye - Software Development Program",
-	contact: "yeak558@gmail.com",
-	pwd: "https://yuak42.github.io",
-	ls: "Yeah, every time I see a terminal I want to type 'ls' too",
-};
-
 let history = [];
-let historyIndex = -1;
+let historyIndex = 0;
 
 terminalCommandInput.focus();
 
